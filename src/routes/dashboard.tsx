@@ -29,7 +29,7 @@ function Dashboard() {
     <AppLayout title="Dashboard">
       <div className="card-surface animate-rise mb-6 flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h2 className="text-xl font-semibold text-foreground">Welcome back, Ananya 👋</h2>
+          <h2 className="text-xl font-semibold text-foreground">Welcome back, Yoageshwari 👋</h2>
           <p className="mt-1 text-sm text-muted-foreground">
             You have {upcoming.length} upcoming exams this month. Best of luck!
           </p>

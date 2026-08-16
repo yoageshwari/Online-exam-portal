@@ -26,7 +26,7 @@ export const Route = createFileRoute("/")({
 
 function LoginPage() {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("ananya.sharma@college.edu");
+  const [email, setEmail] = useState("yoageshwari.sharma@college.edu");
   const [password, setPassword] = useState("student123");
   const [remember, setRemember] = useState(true);
   const [error, setError] = useState("");
