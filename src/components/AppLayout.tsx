@@ -94,9 +94,9 @@ export default function AppLayout({ children, title }: { children: ReactNode; ti
           </button>
           <h1 className="text-base font-semibold text-foreground">{title}</h1>
           <div className="ml-auto flex items-center gap-2">
-            <span className="hidden text-sm text-muted-foreground sm:block">Ananya Sharma</span>
+            <span className="hidden text-sm text-muted-foreground sm:block">Yoageshwari Sharma</span>
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-soft text-sm font-semibold text-primary">
-              A
+              Y
             </span>
           </div>
         </header>

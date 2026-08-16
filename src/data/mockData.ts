@@ -21,9 +21,9 @@ export type Exam = {
 };
 
 export const student = {
-  name: "Ananya Sharma",
+  name: "Yoageshwari Sharma",
   studentId: "IT2023045",
-  email: "ananya.sharma@college.edu",
+  email: "yoageshwari.sharma@college.edu",
   phone: "+91 98765 43210",
   department: "Information Technology",
   semester: "4th Semester",
