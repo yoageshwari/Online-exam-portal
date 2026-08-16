@@ -12,4 +12,12 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  nitro: {
+    // Nitro's auto-detected "netlify" preset defaults to publishing client
+    // assets straight into "dist", but this site's configured publish
+    // directory is "dist/client" — pin it explicitly so they match.
+    output: {
+      publicDir: "dist/client",
+    },
+  },
 });
