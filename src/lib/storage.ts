@@ -1,5 +1,9 @@
 // Tiny localStorage helpers — our stand-in for a database.
-import { pastResults, exams as mockExams, student as mockStudent } from "@/data/mockData";
+import {
+  pastResults,
+  exams as mockExams,
+  student as mockStudent,
+} from "@/data/mockData";
 import type { Exam, ResultRecord } from "@/data/mockData";
 
 const KEYS = {
@@ -50,7 +54,8 @@ export const profileStore = {
 
 export const teacherExamsStore = {
   all: (): Exam[] => read<Exam[]>(KEYS.teacherExams, []),
-  add: (exam: Exam) => write(KEYS.teacherExams, [exam, ...teacherExamsStore.all()]),
+  add: (exam: Exam) =>
+    write(KEYS.teacherExams, [exam, ...teacherExamsStore.all()]),
 };
 
 export function allExams(): Exam[] {
@@ -60,3 +65,17 @@ export function allExams(): Exam[] {
 export function findExam(id: string): Exam | undefined {
   return allExams().find((e) => e.id === id);
 }
+
+const SAVED_EXAMS_KEY = "exam_portal_saved_exams";
+
+export const savedExamsStore = {
+  all: (): string[] => read<string[]>(SAVED_EXAMS_KEY, []),
+  toggle: (examId: string): string[] => {
+    const saved = savedExamsStore.all();
+    const updated = saved.includes(examId)
+      ? saved.filter((id) => id !== examId)
+      : [...saved, examId];
+    write(SAVED_EXAMS_KEY, updated);
+    return updated;
+  },
+};
